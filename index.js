@@ -6,7 +6,7 @@ const KEY = 'api-list';
 const search = new RegExp(`${alfy.input}`, 'i');
 const now = Date.now();
 
-const isExpired = timestamp => now - timestamp > 3600000;
+const isExpired = timestamp => now - timestamp > 86400000;
 
 const getApiList = () => {
 	if (alfy.cache.has(KEY)) {
