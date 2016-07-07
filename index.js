@@ -3,7 +3,7 @@ const got = require('got');
 const alfy = require('alfy');
 
 const KEY = 'api-list';
-const search = new RegExp(`${process.argv[2]}`, 'i');
+const search = new RegExp(`${alfy.input}`, 'i');
 const now = Date.now();
 
 const isExpired = timestamp => now - timestamp > 3600000;
@@ -50,17 +50,5 @@ getApiList()
 				quicklookurl: `https://angular.io/docs/ts/latest/api/${x.path}`
 			}));
 
-		console.log(JSON.stringify({items}));
-	})
-	.catch(err => {
-		console.log(JSON.stringify({
-			items: [{
-				title: err.name,
-				subtitle: err.message,
-				valid: false,
-				text: {
-					copy: err.stack
-				}
-			}]
-		}));
+		alfy.output(items);
 	});
