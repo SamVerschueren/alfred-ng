@@ -123,7 +123,7 @@ fi</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.0.0</string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/SamVerschueren</string>
 </dict>
