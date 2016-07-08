@@ -43,12 +43,21 @@ getApiList()
 	.then(modules => {
 		const items = modules
 			.filter(x => search.test(x.title))
-			.map(x => ({
-				title: x.title,
-				subtitle: `${x.barrel} (${x.stability})`,
-				arg: `https://angular.io/docs/ts/latest/api/${x.path}`,
-				quicklookurl: `https://angular.io/docs/ts/latest/api/${x.path}`
-			}));
+			.map(x => {
+				const url = `https://angular.io/docs/ts/latest/api/${x.path}`;
+
+				return {
+					title: x.title,
+					subtitle: `${x.barrel} - ${x.docType}`,
+					arg: url,
+					quicklookurl: url,
+					mods: {
+						alt: {
+							subtitle: x.stability
+						}
+					}
+				};
+			});
 
 		alfy.output(items);
 	});

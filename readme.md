@@ -17,6 +17,7 @@
 In Alfred, type `ng2`, <kbd>Enter</kbd>, and your query.
 
 Select an item and press <kbd>Enter</kbd> to go to its [angular.io](https://angular.io) documentation.<br>
+Hold <kbd>Alt</kbd> to show the API stability.<br>
 Press <kbd>Shift</kbd> to view the documentation in Quick Look.
 
 
