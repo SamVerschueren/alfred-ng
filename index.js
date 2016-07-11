@@ -3,6 +3,7 @@ const got = require('got');
 const alfy = require('alfy');
 
 const KEY = 'api-list';
+const TYPES = ['class', 'const', 'decorator', 'directive', 'enum', 'function', 'interface', 'var']
 const search = new RegExp(`${alfy.input}`, 'i');
 const now = Date.now();
 
@@ -48,9 +49,11 @@ getApiList()
 
 				return {
 					title: x.title,
+					autocomplete: x.title,
 					subtitle: `${x.barrel} - ${x.docType}`,
 					arg: url,
 					quicklookurl: url,
+					icon: TYPES.includes(x.docType) && {path: `./icons/${x.docType}.png`},
 					mods: {
 						alt: {
 							subtitle: x.stability
