@@ -2,9 +2,11 @@
 const got = require('got');
 const alfy = require('alfy');
 
+const BASE = 'https://angular.io/docs/ts/latest/api';
 const TYPES = ['class', 'const', 'var', 'let', 'decorator', 'directive', 'enum', 'function', 'interface'];
+const ONE_DAY = 86400000;
 
-const getApiList = () => alfy.fetch('https://angular.io/docs/ts/latest/api/api-list.json', {maxAge: 86400000})
+const getApiList = () => alfy.fetch(`${BASE}/api-list.json`, {maxAge: ONE_DAY})
 	.then(result => {
 		const modules = Object.keys(result);
 		let items = [];
@@ -19,7 +21,7 @@ const getApiList = () => alfy.fetch('https://angular.io/docs/ts/latest/api/api-l
 getApiList()
 	.then(modules => {
 		const items = modules.map(x => {
-			const url = `https://angular.io/docs/ts/latest/api/${x.path}`;
+			const url = `${BASE}/${x.path}`;
 
 			return {
 				title: x.title,
