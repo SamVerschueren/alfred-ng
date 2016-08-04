@@ -29,7 +29,7 @@ getApiList()
 				subtitle: `${x.barrel} - ${x.docType}`,
 				arg: url,
 				quicklookurl: url,
-				icon: TYPES.includes(x.docType) && {path: `./icons/${x.docType}.png`},
+				icon: TYPES.indexOf(x.docType) !== -1 && {path: `./icons/${x.docType}.png`},
 				mods: {
 					alt: {
 						subtitle: x.stability
