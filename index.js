@@ -1,5 +1,4 @@
 'use strict';
-const got = require('got');
 const alfy = require('alfy');
 
 const BASE = 'https://angular.io/docs/ts/latest/api';

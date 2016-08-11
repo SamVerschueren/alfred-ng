@@ -1,4 +1,4 @@
-# alfred-ng2
+# alfred-ng2 [![Build Status](https://travis-ci.org/SamVerschueren/alfred-ng2.svg?branch=master)](https://travis-ci.org/SamVerschueren/alfred-ng2)
 
 > [Alfred 3](https://www.alfredapp.com) workflow to search for Angular 2 API references
 
