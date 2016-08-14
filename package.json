@@ -9,5 +9,8 @@
     "alfy-test": "^0.2.0",
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
