@@ -12,6 +12,20 @@ test('`items` property is array', async t => {
 	t.true(result.length > 0);
 });
 
+test('cache', async t => {
+	await t.context.alfy('opt');
+
+	t.true(t.context.alfy.cache.size === 1);
+
+	const key = 'https://angular.io/docs/ts/latest/api/api-list.json'.replace(/\./g, '\\.');
+	const data = t.context.alfy.cache.get(key);
+	const diff = (data.timestamp - Date.now()) / 1000;
+
+	t.true(diff < 86400 && diff > 86395);
+	t.truthy(data.data['@angular/core']);
+	t.truthy(data.data['@angular/common']);
+});
+
 test('result', async t => {
 	const result = await t.context.alfy('opt');
 	const selectOption = result.find(item => item.title === 'NgSelectOption');
