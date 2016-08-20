@@ -6,7 +6,7 @@
     "alfy": "^0.2.0"
   },
   "devDependencies": {
-    "alfy-test": "^0.2.0",
+    "alfy-test": "^0.3.0",
     "ava": "*",
     "xo": "*"
   },
