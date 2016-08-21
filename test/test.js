@@ -17,7 +17,7 @@ test('cache', async t => {
 
 	t.true(t.context.alfy.cache.size === 1);
 
-	const key = 'https://angular.io/docs/ts/latest/api/api-list.json'.replace(/\./g, '\\.');
+	const key = 'https://angular.io/docs/ts/latest/api/api-list.json{"json":true,"maxAge":86400000}'.replace(/\./g, '\\.');
 	const data = t.context.alfy.cache.get(key);
 	const diff = (data.timestamp - Date.now()) / 1000;
 
