@@ -1,6 +1,6 @@
 {
   "name": "alfred-ng2",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Search for Angular 2 API references on angular.io",
   "license": "MIT",
   "repository": "SamVerschueren/alfred-ng2",
