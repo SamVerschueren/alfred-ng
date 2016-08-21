@@ -1,8 +1,37 @@
 {
-  "scripts": {
-    "test": "xo && ava"
+  "name": "alfred-ng2",
+  "version": "0.3.2",
+  "description": "Search for Angular 2 API references on angular.io",
+  "license": "MIT",
+  "repository": "SamVerschueren/alfred-ng2",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
   },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "alfred-link"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist",
+    "icons"
+  ],
+  "keywords": [
+    "alfred",
+    "ng2",
+    "angular2",
+    "workflow",
+    "alfred-workflow",
+    "alfy"
+  ],
   "dependencies": {
+    "alfred-link": "^0.1.0",
     "alfy": "^0.3.0"
   },
   "devDependencies": {

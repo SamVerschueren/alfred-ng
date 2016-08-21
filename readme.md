@@ -7,7 +7,9 @@
 
 ## Install
 
-[Install the workflow.](http://www.packal.org/workflow/ng2)
+```
+$ npm install -g alfred-ng2
+```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
 
