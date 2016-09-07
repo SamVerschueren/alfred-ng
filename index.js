@@ -1,5 +1,8 @@
 'use strict';
 const alfy = require('alfy');
+const alfredNotifier = require('alfred-notifier');
+
+alfredNotifier();
 
 const BASE = 'https://angular.io/docs/ts/latest/api';
 const TYPES = ['class', 'const', 'var', 'let', 'decorator', 'directive', 'enum', 'function', 'interface'];
