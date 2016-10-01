@@ -32,7 +32,7 @@
   ],
   "dependencies": {
     "alfred-link": "^0.1.0",
-    "alfred-notifier": "^0.1.0",
+    "alfred-notifier": "^0.2.0",
     "alfy": "^0.3.0"
   },
   "devDependencies": {
