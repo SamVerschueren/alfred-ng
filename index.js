@@ -1,6 +1,7 @@
 'use strict';
 const alfy = require('alfy');
 const alfredNotifier = require('alfred-notifier');
+const pkg = require('./package.json');
 
 alfredNotifier();
 
@@ -8,8 +9,10 @@ const BASE = 'https://angular.io/docs/ts/latest/api';
 const TYPES = ['class', 'const', 'var', 'let', 'decorator', 'directive', 'enum', 'function', 'interface'];
 const ONE_DAY = 86400000;
 
-const getApiList = () => alfy.fetch(`${BASE}/api-list.json`, {maxAge: ONE_DAY})
-	.then(result => {
+const getApiList = () => alfy.fetch(`${BASE}/api-list.json`, {
+	maxAge: ONE_DAY,
+	version: pkg.version,			// https://github.com/sindresorhus/alfy/issues/23
+	transform: result => {
 		const modules = Object.keys(result);
 		let items = [];
 
@@ -18,7 +21,8 @@ const getApiList = () => alfy.fetch(`${BASE}/api-list.json`, {maxAge: ONE_DAY})
 		}
 
 		return items;
-	});
+	}
+});
 
 getApiList()
 	.then(modules => {
