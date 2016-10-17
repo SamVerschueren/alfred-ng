@@ -1,6 +1,5 @@
 import test from 'ava';
 import alfyTest from 'alfy-test';
-import pkg from '../package.json';
 
 test.beforeEach(t => {
 	t.context.alfy = alfyTest();
@@ -18,13 +17,13 @@ test('cache', async t => {
 
 	t.true(t.context.alfy.cache.size === 1);
 
-	const key = `https://angular.io/docs/ts/latest/api/api-list.json{"json":true,"maxAge":86400000,"version":"${pkg.version}"}`.replace(/\./g, '\\.');
+	const key = `https://angular.io/docs/ts/latest/api/api-list.json{"json":true,"maxAge":86400000}`.replace(/\./g, '\\.');
 	const data = t.context.alfy.cache.get(key);
 	const diff = (data.timestamp - Date.now()) / 1000;
 
 	t.true(diff < 86400 && diff > 86395);
-	t.true(Array.isArray(data.data));
-	t.truthy(data.data.find(x => x.title === 'Component'));
+	t.true(Array.isArray(data.data.data));
+	t.truthy(data.data.data.find(x => x.title === 'Component'));
 });
 
 test('result', async t => {
