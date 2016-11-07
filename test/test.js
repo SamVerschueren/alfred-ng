@@ -22,8 +22,8 @@ test('cache', async t => {
 	const diff = (data.timestamp - Date.now()) / 1000;
 
 	t.true(diff < 86400 && diff > 86395);
-	t.true(Array.isArray(data.data.data));
-	t.truthy(data.data.data.find(x => x.title === 'Component'));
+	t.true(Array.isArray(data.data));
+	t.truthy(data.data.find(x => x.title === 'Component'));
 });
 
 test('result', async t => {
