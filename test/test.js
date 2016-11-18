@@ -46,3 +46,15 @@ test('result', async t => {
 		}
 	});
 });
+
+test('web search', async t => {
+	const result = await t.context.alfy('aot');
+
+	t.deepEqual(result[0], {
+		title: 'Ahead-of-Time Compilation',
+		autocomplete: 'Ahead-of-Time Compilation',
+		subtitle: 'cookbook - typescript',
+		arg: 'https://angular.io/docs/ts/latest/cookbook/aot-compiler.html',
+		quicklookurl: 'https://angular.io/docs/ts/latest/cookbook/aot-compiler.html'
+	});
+});
