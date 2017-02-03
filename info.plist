@@ -56,7 +56,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>`alfred-ng2` is being deprecated. Remove this one and run \`npm install -g alfred-ng\`</string>
 				<key>title</key>
 				<string>Search for Angular 2 documentation</string>
 				<key>type</key>
