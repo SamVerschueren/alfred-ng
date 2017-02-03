@@ -25,6 +25,9 @@ Press <kbd>Shift</kbd> to view the documentation in Quick Look.
 
 ## Related
 
+- [alfred-ng2](https://github.com/SamVerschueren/alfred-ng2) - Search for Angular 2 API references on angular.io
+- [alfred-ionic](https://github.com/SamVerschueren/alfred-ionic) - Search through the Ionic documentation
+- [alfred-firebase](https://github.com/SamVerschueren/alfred-firebase) - Search through the Firebase documentation
 - [alfred-npms](https://github.com/sindresorhus/alfred-npms) - Search for npm packages with npms.io
 - [alfy](https://github.com/sindresorhus/alfy) - Create Alfred workflows with ease
 
