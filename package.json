@@ -1,6 +1,6 @@
 {
   "name": "alfred-ng",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "description": "Search through the Angular documentation",
   "license": "MIT",
   "repository": "SamVerschueren/alfred-ng",
