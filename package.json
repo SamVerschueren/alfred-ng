@@ -1,9 +1,9 @@
 {
-  "name": "alfred-ng2",
+  "name": "alfred-ng",
   "version": "0.5.2",
-  "description": "Search for Angular 2 API references on angular.io",
+  "description": "Search through the Angular documentation",
   "license": "MIT",
-  "repository": "SamVerschueren/alfred-ng2",
+  "repository": "SamVerschueren/alfred-ng",
   "author": {
     "name": "Sam Verschueren",
     "email": "sam.verschueren@gmail.com",
@@ -26,8 +26,12 @@
   ],
   "keywords": [
     "alfred",
+    "ng",
+    "angular",
     "ng2",
     "angular2",
+    "itsjustangular",
+    "justangular",
     "workflow",
     "alfred-workflow",
     "alfy"

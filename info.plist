@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>name</key>
-    <string>ng2</string>
+    <string>ng</string>
 	<key>bundleid</key>
-	<string>com.samverschueren.ng2</string>
+	<string>com.samverschueren.ng</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -38,7 +38,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ng2</string>
+				<string>ng</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -56,9 +56,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>`alfred-ng2` is being deprecated. Remove this one and run `npm install -g alfred-ng`</string>
+				<string></string>
 				<key>title</key>
-				<string>Search for Angular 2 documentation</string>
+				<string>Search through the Angular documentation</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>

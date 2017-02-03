@@ -1,6 +1,6 @@
-# alfred-ng2 [![Build Status](https://travis-ci.org/SamVerschueren/alfred-ng2.svg?branch=master)](https://travis-ci.org/SamVerschueren/alfred-ng2)
+# alfred-ng [![Build Status](https://travis-ci.org/SamVerschueren/alfred-ng.svg?branch=master)](https://travis-ci.org/SamVerschueren/alfred-ng)
 
-> [Alfred 3](https://www.alfredapp.com) workflow to search for Angular 2 API references
+> [Alfred 3](https://www.alfredapp.com) workflow to search through the Angular documentation
 
 <img src="screenshot.png" width="694">
 
@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install -g alfred-ng2
+$ npm install -g alfred-ng
 ```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
@@ -16,7 +16,7 @@ $ npm install -g alfred-ng2
 
 ## Usage
 
-In Alfred, type `ng2`, <kbd>Enter</kbd>, and your query.
+In Alfred, type `ng`, <kbd>Enter</kbd>, and your query.
 
 Select an item and press <kbd>Enter</kbd> to go to its [angular.io](https://angular.io) documentation.<br>
 Hold <kbd>Alt</kbd> to show the API stability.<br>
