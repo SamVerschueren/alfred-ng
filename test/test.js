@@ -17,7 +17,7 @@ test('cache', async t => {
 
 	t.true(t.context.alfy.cache.size === 1);
 
-	const key = `https://angular.io/docs/ts/latest/api/api-list.json{"json":true,"maxAge":86400000}`.replace(/\./g, '\\.');
+	const key = `https://angular.io/generated/docs/app/search-data.json{"json":true,"maxAge":86400000}`.replace(/\./g, '\\.');
 	const data = t.context.alfy.cache.get(key);
 	const diff = (data.timestamp - Date.now()) / 1000;
 
@@ -29,32 +29,29 @@ test('cache', async t => {
 test('result', async t => {
 	const result = await t.context.alfy('opt');
 	const selectOption = result.find(item => item.title === 'NgSelectOption');
+	delete selectOption.keywords;
 
 	t.deepEqual(selectOption, {
 		title: 'NgSelectOption',
 		autocomplete: 'NgSelectOption',
-		subtitle: '@angular/forms - directive',
-		arg: 'https://angular.io/docs/ts/latest/api/forms/index/NgSelectOption-directive.html',
-		quicklookurl: 'https://angular.io/docs/ts/latest/api/forms/index/NgSelectOption-directive.html',
+		subtitle: 'directive',
+		arg: 'https://angular.io/api/forms/NgSelectOption',
+		quicklookurl: 'https://angular.io/api/forms/NgSelectOption',
 		icon: {
 			path: './icons/directive.png'
-		},
-		mods: {
-			alt: {
-				subtitle: 'stable'
-			}
 		}
 	});
 });
 
 test('web search', async t => {
-	const result = await t.context.alfy('aot');
+	const result = await t.context.alfy('ahead-of-time');
+	delete result[0].keywords;
 
 	t.deepEqual(result[0], {
 		title: 'Ahead-of-Time Compilation',
 		autocomplete: 'Ahead-of-Time Compilation',
-		subtitle: 'cookbook - typescript',
-		arg: 'https://angular.io/docs/ts/latest/cookbook/aot-compiler.html',
-		quicklookurl: 'https://angular.io/docs/ts/latest/cookbook/aot-compiler.html'
+		subtitle: 'content',
+		arg: 'https://angular.io/guide/aot-compiler',
+		quicklookurl: 'https://angular.io/guide/aot-compiler'
 	});
 });
