@@ -15,7 +15,7 @@ test('`items` property is array', async t => {
 test('cache', async t => {
 	await t.context.alfy('opt');
 
-	t.true(t.context.alfy.cache.size === 1);
+	t.true(t.context.alfy.cache.size === 2);
 
 	const key = `https://angular.io/generated/docs/app/search-data.json{"json":true,"maxAge":86400000}`.replace(/\./g, '\\.');
 	const data = t.context.alfy.cache.get(key);
@@ -34,11 +34,16 @@ test('result', async t => {
 	t.deepEqual(selectOption, {
 		title: 'NgSelectOption',
 		autocomplete: 'NgSelectOption',
-		subtitle: 'directive',
+		subtitle: '@angular/forms - directive',
 		arg: 'https://angular.io/api/forms/NgSelectOption',
 		quicklookurl: 'https://angular.io/api/forms/NgSelectOption',
 		icon: {
 			path: './icons/directive.png'
+		},
+		mods: {
+			alt: {
+				subtitle: 'stable'
+			}
 		}
 	});
 });
@@ -52,6 +57,11 @@ test('web search', async t => {
 		autocomplete: 'Ahead-of-Time Compilation',
 		subtitle: 'content',
 		arg: 'https://angular.io/guide/aot-compiler',
-		quicklookurl: 'https://angular.io/guide/aot-compiler'
+		quicklookurl: 'https://angular.io/guide/aot-compiler',
+		mods: {
+			alt: {
+				subtitle: 'unknown'
+			}
+		}
 	});
 });
