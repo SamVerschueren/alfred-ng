@@ -17,7 +17,7 @@ test('cache', async t => {
 
 	t.true(t.context.alfy.cache.size === 2);
 
-	const key = `https://angular.io/generated/docs/app/search-data.json{"json":true,"maxAge":86400000}`.replace(/\./g, '\\.');
+	const key = 'https://angular.io/generated/docs/app/search-data.json{"json":true,"maxAge":86400000}'.replace(/\./g, '\\.');
 	const data = t.context.alfy.cache.get(key);
 	const diff = (data.timestamp - Date.now()) / 1000;
 
@@ -53,11 +53,14 @@ test('web search', async t => {
 	delete result[0].keywords;
 
 	t.deepEqual(result[0], {
-		title: 'Ahead-of-Time Compilation',
-		autocomplete: 'Ahead-of-Time Compilation',
-		subtitle: 'content',
-		arg: 'https://angular.io/guide/aot-compiler',
-		quicklookurl: 'https://angular.io/guide/aot-compiler',
+		title: 'UpgradeAdapter',
+		autocomplete: 'UpgradeAdapter',
+		subtitle: '@angular/upgrade - class',
+		arg: 'https://angular.io/api/upgrade/UpgradeAdapter',
+		quicklookurl: 'https://angular.io/api/upgrade/UpgradeAdapter',
+		icon: {
+			path: './icons/class.png'
+		},
 		mods: {
 			alt: {
 				subtitle: 'unknown'

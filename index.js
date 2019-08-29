@@ -7,8 +7,7 @@ const web = require('./lib/web');
 Promise.all([
 	api.search(),
 	web.search()
-])
-.then(results => {
+]).then(results => {
 	let items = Array.prototype.concat.apply([], results);
 	items = uniqWith(items, (a, b) => a.arg + a.title === b.arg + b.title);
 
